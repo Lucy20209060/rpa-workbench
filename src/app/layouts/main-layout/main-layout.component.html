@@ -1,0 +1,9 @@
+<div el-container class="demo-box">
+  <div el-aside width="200px">侧边栏</div>
+  <div el-container direction="vertical">
+    <div el-header [el-class]="'main-layout-header'">头部</div>
+    <div el-main>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+{
+    "/rpa": {
+        "target": "http://rpa.aliyun.net/rpa",
+        "secure":false,
+        "changeOrigin": true,
+        "pathRewrite": {
+        	"^/rpa" : ""
+    	}
+    }
+}

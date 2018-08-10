@@ -1,0 +1,25 @@
+<div class="login-page-wrap">
+  <div class="header">
+    <h1><img src="../../assets/images/login-header-logo.png" /></h1>
+  </div>
+  <div class="content">
+    <div>
+      <img src="../../assets/images/login-content.png" />
+      <dl class="login-box">
+        <dt>阿里云RPA | 让一切变得自动化</dt>
+        <dd>
+          <el-input placeholder="请输入账号" [model]="accountNumber"></el-input>
+        </dd>
+        <dd>
+          <el-input native-type="password" placeholder="请输入密码"></el-input>
+        </dd>
+        <dd>
+          <button (click)="login()">登录</button>
+        </dd>
+        <dd style="text-align: right">
+          <em>忘记密码？</em>
+        </dd>
+      </dl>
+    </div>
+  </div>
+</div>
