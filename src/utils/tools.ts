@@ -1,5 +1,3 @@
-import { ElMessageService } from 'element-angular';
-
-export const message = (type:string='success',info:string='') => void{
-	
-}
+// export const message = (type:string='success',info:string='') => {
+// 	console.log(type,info)
+// }

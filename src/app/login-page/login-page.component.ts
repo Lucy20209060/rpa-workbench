@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ElMessageService } from 'element-angular';
 
 @Component({
   selector: 'app-login-page',
@@ -7,15 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPageComponent implements OnInit {
   // 账号
-  public accountNumber:string = '';
-  constructor() { }
+  private accountNumber:string = '';
+  constructor(
+    private message: ElMessageService
+  ) {
+
+  }
 
   ngOnInit() {
   }
 
   login():void {
-    if(this.accountNumber === '')return;
-    console.log(this.accountNumber)
+    this.message.show('hahhahah')
+    // console.log(this)
+    // if(this.accountNumber === '') return this.message.show('请输入账号');
+
+    // console.log(this.accountNumber)
   }
 
 }

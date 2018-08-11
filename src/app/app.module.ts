@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
-// 引入element模块
+// 引入element UI
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ElModule } from 'element-angular';
 // 引入路由模块
 import { AppRoutingModule } from './app.router';
@@ -22,6 +23,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     ElModule.forRoot(),
     HttpModule
