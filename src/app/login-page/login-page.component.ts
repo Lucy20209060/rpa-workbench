@@ -6,13 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-page.component.scss']
 })
 export class LoginPageComponent implements OnInit {
-  public accountNumber:string;
+  // 账号
+  public accountNumber:string = '';
   constructor() { }
 
   ngOnInit() {
   }
 
   login():void {
+    if(this.accountNumber === '')return;
     console.log(this.accountNumber)
   }
 

@@ -8,7 +8,12 @@
       <dl class="login-box">
         <dt>阿里云RPA | 让一切变得自动化</dt>
         <dd>
-          <el-input placeholder="请输入账号" [model]="accountNumber"></el-input>
+          <el-input 
+            placeholder="请输入账号" 
+            maxlength="15"
+            [model]="accountNumber" 
+            (input)="accountNumber=$event.target.value"
+          ></el-input>
         </dd>
         <dd>
           <el-input native-type="password" placeholder="请输入密码"></el-input>
