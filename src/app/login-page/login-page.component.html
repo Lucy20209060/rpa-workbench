@@ -16,7 +16,13 @@
           ></el-input>
         </dd>
         <dd>
-          <el-input native-type="password" placeholder="请输入密码"></el-input>
+          <el-input 
+            native-type="password" 
+            placeholder="请输入密码"
+            maxlength="20"
+            [model]="password" 
+            (input)="password=$event.target.value"
+          ></el-input>
         </dd>
         <dd>
           <button (click)="login()">登录</button>

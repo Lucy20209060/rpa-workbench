@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ElMessageService } from 'element-angular';
+import { ElNotificationService } from 'element-angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -9,8 +10,12 @@ import { ElMessageService } from 'element-angular';
 export class LoginPageComponent implements OnInit {
   // 账号
   private accountNumber:string = '';
+  // 密码
+  private password:string = '';
+
   constructor(
-    private message: ElMessageService
+    private notify: ElNotificationService,
+    private router: Router
   ) {
 
   }
@@ -19,11 +24,19 @@ export class LoginPageComponent implements OnInit {
   }
 
   login():void {
-    this.message.show('hahhahah')
-    // console.log(this)
-    // if(this.accountNumber === '') return this.message.show('请输入账号');
+    if(this.accountNumber === '')return this.notify.warning('请输入账号','登录失败');
+    if(this.password === '')return this.notify.warning('请输入密码','登录失败');
+    // console.log(this.accountNumber,this.password)
 
-    // console.log(this.accountNumber)
+    /*
+		*	js跳转 带参数跳转
+		*/ 
+		// navigate方式
+		this.router.navigate(['/homePage']);
+		// this.router.navigate(['/cart', 77]);
+
+		// navigateByUrl方式
+		// this.router.navigateByUrl('/cart/55');
   }
 
 }
