@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ElNotificationService } from 'element-angular';
+import { ElNotificationService, ElMessageService } from 'element-angular';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,6 +15,7 @@ export class LoginPageComponent implements OnInit {
 
   constructor(
     private notify: ElNotificationService,
+    private message: ElMessageService,
     private router: Router
   ) {
 
@@ -37,6 +38,10 @@ export class LoginPageComponent implements OnInit {
 
 		// navigateByUrl方式
 		// this.router.navigateByUrl('/cart/55');
+  }
+
+  alertInfo():void {
+    this.message.warning('请联系管理员修改密码');
   }
 
 }
