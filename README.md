@@ -30,4 +30,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ****
 
 > log 记录
-* 2018-08-10 15:53:42 feat:登陆页静态页面完成* 2018-08-11 17:18:39 feat:登录功能
+
+* 2018-08-10 15:53:42 feat:登陆页静态页面完成* 2018-08-11 17:25:03 feat:登录功能
