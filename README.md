@@ -31,4 +31,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 > log 记录
 
-* 2018-08-10 15:53:42 feat:登陆页静态页面完成* 2018-08-11 17:25:03 feat:登录功能* 2018-08-11 18:36:35 feat:使用消息提示忘记引入@angular/platform-browser/animations导致报错* 2018-08-12 00:53:10 feat:js跳转或带参数* 2018-08-12 01:26:10 feat:登陆页完成
+* 2018-08-10 15:53:42 feat:登陆页静态页面完成* 2018-08-11 17:25:03 feat:登录功能* 2018-08-11 18:36:35 feat:使用消息提示忘记引入@angular/platform-browser/animations导致报错* 2018-08-12 00:53:10 feat:js跳转或带参数* 2018-08-12 01:26:10 feat:登陆页完成* 2018-08-12 19:54:49 feat:全局服务

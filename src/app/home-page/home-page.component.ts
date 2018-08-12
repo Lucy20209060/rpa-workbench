@@ -17,12 +17,14 @@ export class HomePageComponent implements OnInit {
   }
 
   makePost():void{ // JSON.stringify(par)
-		this.http
+		const aa = this.http
 			.post('/rpa/user/token/csrf',{})
 			.subscribe((res:Response) => {
 				const data = res.json();
-				console.log(data.data)
-			})
+        // console.log(data.data)
+        return data.data
+      })
+    console.log(aa)
 	}
 
 }

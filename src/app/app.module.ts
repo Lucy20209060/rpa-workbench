@@ -3,9 +3,11 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 // 引入element UI
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ElModule } from 'element-angular';
+import { ElModule } from 'element-angular/release/element-angular.module';
 // 引入路由模块
 import { AppRoutingModule } from './app.router';
+// 引入全局方法
+import { MyToolsService } from './_services/index';
 // 引入页面
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -28,7 +30,9 @@ import { LoginPageComponent } from './login-page/login-page.component';
     ElModule.forRoot(),
     HttpModule
   ],
-  providers: [],
+  providers: [
+    MyToolsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

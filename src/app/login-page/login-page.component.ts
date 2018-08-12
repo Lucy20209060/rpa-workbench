@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ElNotificationService, ElMessageService } from 'element-angular';
+import { ElNotificationService } from 'element-angular/release/element-angular.module';
 import { Router } from '@angular/router';
+import { MyToolsService } from '../_services/index';
+
 
 @Component({
   selector: 'app-login-page',
@@ -15,13 +17,12 @@ export class LoginPageComponent implements OnInit {
 
   constructor(
     private notify: ElNotificationService,
-    private message: ElMessageService,
-    private router: Router
-  ) {
-
-  }
+    private router: Router,
+    private myTools: MyToolsService
+  ) { }
 
   ngOnInit() {
+    
   }
 
   login():void {
@@ -41,7 +42,7 @@ export class LoginPageComponent implements OnInit {
   }
 
   alertInfo():void {
-    this.message.warning('请联系管理员修改密码');
+    this.myTools.prompt('warning','请联系管理员修改密码')
   }
 
 }

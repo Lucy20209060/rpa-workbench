@@ -8,7 +8,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 
 const routes: Routes = [
     // 重定向
-    { path:'', redirectTo: 'homePage', pathMatch: 'full' },
+    { path:'', redirectTo: 'login', pathMatch: 'full' },
 	{ path: '', component: MainLayoutComponent, children: [
             { path:'homePage',      component:HomePageComponent }
         ]
