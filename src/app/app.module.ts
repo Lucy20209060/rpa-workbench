@@ -7,8 +7,8 @@ import { ElModule } from 'element-angular/release/element-angular.module';
 // 引入路由模块
 import { AppRoutingModule } from './app.router';
 // 引入全局方法
-import { MyToolsService } from './_services/index';
-// 引入页面
+import { MyToolsService, MyHttpService } from './_services/index';
+// 引入页面 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -31,7 +31,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
     HttpModule
   ],
   providers: [
-    MyToolsService
+    MyToolsService,
+    MyHttpService
   ],
   bootstrap: [AppComponent]
 })

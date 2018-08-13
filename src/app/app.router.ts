@@ -7,19 +7,20 @@ import { MainLayoutComponent } from './layouts/main-layout/main-layout.component
 import { LoginPageComponent } from './login-page/login-page.component';
 
 const routes: Routes = [
-    // 重定向
-    { path:'', redirectTo: 'homePage', pathMatch: 'full' },
-	{ path: '', component: MainLayoutComponent, children: [
-            { path:'homePage',      component:HomePageComponent }
-        ]
-    },
-    {path:'login', component: LoginPageComponent},
-    
-
-    // 404 页面
-    { path:'404', component:NotFoundComponent },
-    // 重定向
-    { path: '**', redirectTo: '404',pathMatch: 'full' }
+	// 重定向
+	{ path:'', redirectTo: 'homePage', pathMatch: 'full' },
+	{ 
+		path: '', 
+		component: MainLayoutComponent, 
+		children: [
+			{ path:'homePage', component:HomePageComponent }
+		]
+	},
+	{path:'login', component: LoginPageComponent},
+	// 404 页面
+	{ path:'404', component:NotFoundComponent },
+	// 重定向
+	{ path: '**', redirectTo: '404',pathMatch: 'full' }
 ];
 
 @NgModule({

@@ -8,23 +8,10 @@ import { Http, Response } from '@angular/http';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor(private http: Http) {
-
-	}
+  constructor(private http: Http) {}
 
   ngOnInit() {
-    this.makePost();
+    
   }
-
-  makePost():void{ // JSON.stringify(par)
-		const aa = this.http
-			.post('/rpa/user/token/csrf',{})
-			.subscribe((res:Response) => {
-				const data = res.json();
-        // console.log(data.data)
-        return data.data
-      })
-    console.log(aa)
-	}
 
 }
