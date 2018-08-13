@@ -3,17 +3,21 @@ import { ElNotificationService } from 'element-angular/release/element-angular.m
 import { Router } from '@angular/router';
 import { MyToolsService, MyHttpService } from '../../shared/services';
 import { test } from '../../shared/utils';
+import { fadeAnimation } from '../../shared/animation';
 
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.scss'],
+  animations: [fadeAnimation],
 })
 export class LoginPageComponent implements OnInit {
   // 账号
   private accountNumber:string = '';
   // 密码
   private password:string = '';
+
+  private AnimationActive:boolean = false;
 
   constructor(
     private notify: ElNotificationService,
@@ -24,6 +28,10 @@ export class LoginPageComponent implements OnInit {
 
   ngOnInit() {
     // mergeParams()
+  }
+
+  switch():void {
+    this.AnimationActive = !this.AnimationActive
   }
 
   login():void {

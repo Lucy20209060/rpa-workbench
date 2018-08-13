@@ -4,8 +4,8 @@
   </div>
   <div class="content">
     <div>
-      <img src="../../assets/images/login-content.png" />
-      <dl class="login-box">
+      <img (click)="switch()" src="../../assets/images/login-content.png" />
+      <dl class="login-box"  [@fadeAnimation]="AnimationActive">
         <dt>阿里云RPA | 让一切变得自动化</dt>
         <dd>
           <el-input 
