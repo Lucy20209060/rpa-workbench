@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ElNotificationService } from 'element-angular/release/element-angular.module';
 import { Router } from '@angular/router';
-import { MyToolsService, MyHttpService } from '../_services/index';
-import { mergeParams } from '../../utils/tools';
+import { MyToolsService, MyHttpService } from '../../shared/services';
+// import { mergeParams } from '../../utils/tools';
 
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.scss']
+  styleUrls: ['./login-page.component.scss'],
 })
 export class LoginPageComponent implements OnInit {
   // 账号
@@ -23,7 +23,7 @@ export class LoginPageComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    
+    // mergeParams()
   }
 
   login():void {
