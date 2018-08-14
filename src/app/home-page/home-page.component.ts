@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Http, Response } from '@angular/http';
+// import { Http, Response } from '@angular/http';
 
 @Component({
   selector: 'app-home-page',
@@ -8,7 +8,9 @@ import { Http, Response } from '@angular/http';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor(private http: Http) {}
+  constructor(
+    // private http: Http
+  ) { }
 
   ngOnInit() {
     

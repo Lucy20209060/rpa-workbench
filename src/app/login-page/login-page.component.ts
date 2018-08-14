@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ElNotificationService } from 'element-angular/release/element-angular.module';
 import { Router } from '@angular/router';
 import { MyToolsService, MyHttpService } from '../../shared/services';
-import { test } from '../../shared/utils';
+// import { test } from '../../shared/utils';
 import { fadeAnimation } from '../../shared/animation';
 
 @Component({
@@ -35,7 +35,6 @@ export class LoginPageComponent implements OnInit {
   }
 
   login():void {
-    test();
     if(this.accountNumber === '')return this.notify.warning('请输入账号','登录失败');
     if(this.password === '')return this.notify.warning('请输入密码','登录失败');
 

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, URLSearchParams} from '@angular/http';
-import { MyToolsService } from '.';
+import { MyToolsService } from './index';
 
 @Injectable()
 export class MyHttpService {

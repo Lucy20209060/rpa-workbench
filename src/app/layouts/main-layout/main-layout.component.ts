@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MyHttpService } from '../../../shared/services';
 
 @Component({
   selector: 'app-main-layout',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainLayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private myHttp: MyHttpService
+  ) { }
 
   ngOnInit() {
+    this.menuList();
   }
+
+  menuList() {
+    this.myHttp.ajax('/rpa/auth/page/menu/list',{},'get',(data)=>{
+      console.log(2,data)
+    });
+  }
+
+  
 
 }
