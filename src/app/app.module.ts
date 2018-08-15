@@ -16,12 +16,17 @@ import { SliceStrPipe } from '../shared/pipes';
 // 引入自定义指令
 import { LuClassDirective } from '../shared/directives';
 
+// 引入自定义组件
+import { PageHeaderComponent } from '../app/components/page-header/page-header.component';
+
 // 引入页面 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+
+
 
 const pipes = [
   SliceStrPipe
@@ -33,6 +38,9 @@ const directives = [
   declarations: [
     ...pipes,
     ...directives,
+
+    PageHeaderComponent,
+
     AppComponent,
     HomePageComponent,
     NotFoundComponent,
