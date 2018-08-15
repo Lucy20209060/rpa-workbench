@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MyToolsService } from '../shared/services/index'
+import { MyToolsService } from '../shared/services'
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,7 @@ import { MyToolsService } from '../shared/services/index'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'main';
   constructor(
     private myTools: MyToolsService
   ) { }
