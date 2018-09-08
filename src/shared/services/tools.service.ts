@@ -16,7 +16,6 @@ export class MyToolsService {
   }
 
   fristLogin():void {
-    console.log(444)
     const loginToken = getUrlParam('loginToken');
     if(loginToken === null)return;
     let params = new URLSearchParams();

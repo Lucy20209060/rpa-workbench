@@ -7,18 +7,19 @@ import { MyHttpService } from '../../../shared/services';
   styleUrls: ['./main-layout.component.scss']
 })
 export class MainLayoutComponent implements OnInit {
-
+  menuList:Array<object> = [];
   constructor(
     private myHttp: MyHttpService
   ) { }
 
   ngOnInit() {
-    this.menuList();
+    this.getmenuList();
   }
 
-  menuList() {
-    this.myHttp.ajax('/rpa/auth/page/menu/list',{},'get',(data)=>{
-      console.log(2,data)
+  getmenuList() {
+    this.myHttp.ajax('/rpa/auth/page/menu/list',{},'get',(res)=>{
+      console.log(2,res)
+      this.menuList = res.data;
     });
   }
 

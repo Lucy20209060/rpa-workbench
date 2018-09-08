@@ -27,6 +27,16 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+
+1.引入全局样式 比如 iconfont.css
+.angular-cli.json
+```json
+"styles": [
+    "styles.css",
+    "./assets/font/iconfont.css"
+]
+```
+
 ****
 
 > log 记录
@@ -43,4 +53,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * 2018-08-13 15:14:57 feat:自定义指令
 * 2018-08-13 15:23:44 feat:引入自定义js方法
 * 2018-08-13 15:44:52 feat:引入自定义动画
-* 2018-08-14 15:46:07 feat:封装http* 2018-08-15 14:17:10 refactor:关于app相关文件的调整* 2018-08-15 15:41:13 feat:父子组件传值* 2018-08-15 19:53:22 feat:0.5px边框
+* 2018-08-14 15:46:07 feat:封装http
+* 2018-08-15 14:17:10 refactor:关于app相关文件的调整
+* 2018-08-15 15:41:13 feat:父子组件传值
+* 2018-08-15 19:53:22 feat:0.5px边框* 2018-09-08 15:10:28 feat:在.angular-cli.json中引入全局样式
