@@ -16,7 +16,7 @@ export class PageHeaderComponent {
   }
 
   ngOnInit() {
-    console.log(this.pageInfo)
+    // console.log(this.pageInfo)
   }
   
   

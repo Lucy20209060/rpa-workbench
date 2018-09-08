@@ -1,10 +1,18 @@
 <div el-container class="demo-box">
   <div el-aside width="200px">
-    <a 
-    *ngFor="let item of menuList" 
-    routerLink="/login" 
-    routerLinkActive="active"
-    >{{item.menuName}}</a>
+    <div class="logo-wrap">
+      <img src="https://avatars3.githubusercontent.com/u/22017372?s=460&v=4" alt="阿里云RPA">
+    </div>
+    <div class="menu-wrap">
+      <a 
+      *ngFor="let item of menuList" 
+      routerLink="{{item.code}}"
+      routerLinkActive="active"
+      >
+        <i class="iconfont {{item.icon}}"></i>
+        <span>{{item.name}}</span>
+      </a>
+    </div>
   </div>
   <div el-container direction="vertical">
     <div el-header [el-class]="'main-layout-header'">头部</div>

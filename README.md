@@ -56,4 +56,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * 2018-08-14 15:46:07 feat:封装http
 * 2018-08-15 14:17:10 refactor:关于app相关文件的调整
 * 2018-08-15 15:41:13 feat:父子组件传值
-* 2018-08-15 19:53:22 feat:0.5px边框* 2018-09-08 15:10:28 feat:在.angular-cli.json中引入全局样式
+* 2018-08-15 19:53:22 feat:0.5px边框
+* 2018-09-08 15:10:28 feat:在.angular-cli.json中引入全局样式
+* 2018-09-08 20:41:06 feat:处理后台返回的菜单列表数据格式

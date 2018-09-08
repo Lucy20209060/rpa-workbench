@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "@types/lodash": "^4.14.116",
     "core-js": "^2.4.1",
     "element-angular": "^0.7.6",
     "rxjs": "^5.4.1",
