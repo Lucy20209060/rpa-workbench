@@ -4,10 +4,11 @@
       <img src="https://avatars3.githubusercontent.com/u/22017372?s=460&v=4" alt="阿里云RPA">
     </div>
     <div class="menu-wrap">
+        <!-- routerLinkActive 当前路由激活class -->
       <a 
       *ngFor="let item of menuList" 
       routerLink="{{item.code}}"
-      routerLinkActive="active"
+      class="{{currentPath === item.path ? 'active' : null }}"
       >
         <i class="iconfont {{item.icon}}"></i>
         <span>{{item.name}}</span>
@@ -17,6 +18,8 @@
   <div el-container direction="vertical">
     <div el-header [el-class]="'main-layout-header'">头部</div>
     <div el-main>
+      <p class="title">哈哈哈哈</p>
+      
       <router-outlet></router-outlet>
     </div>
   </div>

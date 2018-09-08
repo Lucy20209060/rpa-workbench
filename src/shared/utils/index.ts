@@ -52,8 +52,10 @@ export const menuList = (menuList:Array<object>):Array<object> => {
     })
     tem.push({
       name: menuList[index]['menuName'],
+      path: menuList[index]['menuCode'],
       code: item.code === 'homePage' ? '/homePage' :`/${menuList[index]['menuCode']}/${menuList[index]['resources'][0].code}`,
-      icon: item.icon
+      icon: item.icon,
+      resources: item.code === 'homePage' ? [] : menuList[index]['resources']
     })
   }
   return tem;

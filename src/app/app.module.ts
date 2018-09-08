@@ -25,6 +25,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { UserInfoComponent } from './system-config/user-info/user-info.component';
+import { EnterpriseSettingComponent } from './system-config/enterprise-setting/enterprise-setting.component';
 
 
 
@@ -45,7 +47,9 @@ const directives = [
     HomePageComponent,
     NotFoundComponent,
     MainLayoutComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    UserInfoComponent,
+    EnterpriseSettingComponent
   ],
   imports: [
     BrowserModule,
