@@ -21,6 +21,7 @@ const routes: Routes = [
 		component: MainLayoutComponent, 
 		children: [
 			{ path:'homePage', component:HomePageComponent },
+			{path: 'systemConfig',redirectTo:'systemConfig/userInfo'},
 			{ 
 				path: 'systemConfig',
 				children: [
