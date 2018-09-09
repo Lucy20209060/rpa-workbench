@@ -28,6 +28,7 @@ import { MainLayoutComponent } from './layouts/main-layout/main-layout.component
 import { LoginPageComponent } from './login-page/login-page.component';
 import { UserInfoComponent } from './system-config/user-info/user-info.component';
 import { EnterpriseSettingComponent } from './system-config/enterprise-setting/enterprise-setting.component';
+import { RobotUnattendedComponent } from './client-monitor/robot-unattended/robot-unattended.component';
 
 
 
@@ -51,7 +52,8 @@ const directives = [
     MainLayoutComponent,
     LoginPageComponent,
     UserInfoComponent,
-    EnterpriseSettingComponent
+    EnterpriseSettingComponent,
+    RobotUnattendedComponent
   ],
   imports: [
     BrowserModule,

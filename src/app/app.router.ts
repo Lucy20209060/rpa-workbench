@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomePageComponent } from './home-page/home-page.component';
-import { NotFoundComponent } from './not-found/not-found.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { HomePageComponent } from './home-page/home-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+
 import { UserInfoComponent } from './system-config/user-info/user-info.component';
 import { EnterpriseSettingComponent } from './system-config/enterprise-setting/enterprise-setting.component';
+
+import { RobotUnattendedComponent } from './client-monitor/robot-unattended/robot-unattended.component';
 
 const routes: Routes = [
 	// 重定向
@@ -20,13 +23,20 @@ const routes: Routes = [
 		path: '', 
 		component: MainLayoutComponent, 
 		children: [
-			{ path:'homePage', component:HomePageComponent },
+			{ path:'homePage', component:HomePageComponent, data:{title:'首页'} },
 			{path: 'systemConfig',redirectTo:'systemConfig/userInfo'},
 			{ 
 				path: 'systemConfig',
 				children: [
-					{ path:'userInfo', component:UserInfoComponent },
-					{ path:'enterpriseSetting', component:EnterpriseSettingComponent }
+					{ path:'userInfo', component:UserInfoComponent, data:{title:'系统设置'} },
+					{ path:'enterpriseSetting', component:EnterpriseSettingComponent, data:{title:'系统设置'} }
+				]
+			},
+			{path: 'clientMonitor',redirectTo:'clientMonitor/robotUnattended'},
+			{ 
+				path: 'clientMonitor',
+				children: [
+					{ path:'robotUnattended', component:RobotUnattendedComponent, data:{title:'客户端监控'} }
 				]
 			},
 		]

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core'
 import { Router } from '@angular/router';
-// export type resource=<Array>
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'page-tab',
@@ -8,18 +8,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./page-tab.component.scss'],
 })
 export class PageTabComponent {
-  @Input() path
-	@Input() resources
+	@Input() pageInfo
 	currentPath:string
-  constructor() {
+  constructor(
+		private router: Router,
+		private titleService: Title
+	) {
 		this.currentPath = location.pathname.split('/')[2] || null;
   }
 
   ngOnInit() {
-    
-	}
-	
-	tabClick(code) {
-		this.currentPath = code;
+		// 监听路由变化
+    this.router.events.subscribe((event) => {
+			this.currentPath = location.pathname.split('/')[2] || null;
+			// this.titleService.setTitle(this.pageInfo.name);
+    });
 	}
 }
