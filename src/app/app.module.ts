@@ -31,6 +31,8 @@ import { EnterpriseSettingComponent } from './system-config/enterprise-setting/e
 import { RobotUnattendedComponent } from './client-monitor/robot-unattended/robot-unattended.component';
 import { UnattendedRobotTaskComponent } from './task-manager/unattended-robot-task/unattended-robot-task.component';
 import { VariableListComponent } from './asset-manager/variable-list/variable-list.component';
+import { UserListComponent } from './user-auth-manager/user-list/user-list.component';
+import { RoleListComponent } from './user-auth-manager/role-list/role-list.component';
 
 
 
@@ -57,7 +59,9 @@ const directives = [
     EnterpriseSettingComponent,
     RobotUnattendedComponent,
     UnattendedRobotTaskComponent,
-    VariableListComponent
+    VariableListComponent,
+    UserListComponent,
+    RoleListComponent
   ],
   imports: [
     BrowserModule,

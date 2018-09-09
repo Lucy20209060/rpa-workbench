@@ -10,6 +10,8 @@ import { EnterpriseSettingComponent } from './system-config/enterprise-setting/e
 import { RobotUnattendedComponent } from './client-monitor/robot-unattended/robot-unattended.component';
 import { UnattendedRobotTaskComponent } from './task-manager/unattended-robot-task/unattended-robot-task.component';
 import { VariableListComponent } from './asset-manager/variable-list/variable-list.component';
+import { UserListComponent } from './user-auth-manager/user-list/user-list.component';
+import { RoleListComponent } from './user-auth-manager/role-list/role-list.component';
 
 const routes: Routes = [
 	// 重定向
@@ -53,6 +55,14 @@ const routes: Routes = [
 					{ path:'variableList', component:VariableListComponent, data:{title:'资产管理'} }
 				]
 			},
+			{path: 'userAuthManager',redirectTo:'userAuthManager/userList'},
+			{ 
+				path: 'userAuthManager',
+				children: [
+					{ path:'userList', component:UserListComponent, data:{title:'用户与权限管理'} },
+					{ path:'roleList', component:RoleListComponent, data:{title:'用户与权限管理'} }
+				]
+			},
 		]
 	},
 	// 登陆页
@@ -71,11 +81,11 @@ const routes: Routes = [
 
 @NgModule({
     imports: [RouterModule.forRoot(
-        routes,
-        // 如果我们想要看到在导航的生命周期中发生过哪些事件，可以使用路由器默认配置中的enableTracing选项。
-        // 它会把每个导航生命周期中的事件输出到浏览器的控制台。 这应该只用于调试。我们只需要把enableTracing: true选项
-        // 作为第二个参数传给RouterModule.forRoot()方法就可以了。
-        // { enableTracing: true }
+			routes,
+			// 如果我们想要看到在导航的生命周期中发生过哪些事件，可以使用路由器默认配置中的enableTracing选项。
+			// 它会把每个导航生命周期中的事件输出到浏览器的控制台。 这应该只用于调试。我们只需要把enableTracing: true选项
+			// 作为第二个参数传给RouterModule.forRoot()方法就可以了。
+			// { enableTracing: true }
     )],
     exports: [RouterModule]
 })
