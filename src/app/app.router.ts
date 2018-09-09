@@ -20,7 +20,14 @@ const routes: Routes = [
 		path: '', 
 		component: MainLayoutComponent, 
 		children: [
-			{ path:'homePage', component:HomePageComponent }
+			{ path:'homePage', component:HomePageComponent },
+			{ 
+				path: 'systemConfig',
+				children: [
+					{ path:'userInfo', component:UserInfoComponent },
+					{ path:'enterpriseSetting', component:EnterpriseSettingComponent }
+				]
+			},
 		]
 	},
 	// 登陆页
@@ -29,15 +36,8 @@ const routes: Routes = [
 		component: LoginPageComponent
 	},
 	// 系统设置
-	{ 
-		path: 'systemConfig', 
-		component: MainLayoutComponent, 
-		children: [
-			{ path:'userInfo', component:UserInfoComponent },
-			{ path:'enterpriseSetting', component:EnterpriseSettingComponent }
-		]
-	},
 	
+
 	// 404 页面
 	{ path:'404', component:NotFoundComponent },
 	// 重定向

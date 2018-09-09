@@ -6,6 +6,7 @@
 	opacity: .98;
 	a{
 		display: block;
+		background-color: transparent;
 		color: #fff;
 		line-height: 48px;
 		font-size: 14px;
@@ -21,7 +22,8 @@
 		&:after{
 			position: absolute;
 			content: '';
-			left: 50%;
+			left: 0;
+			top: 50%;
 			height: 0;
 			width: 4px;
 			background-color: #06f;
@@ -32,7 +34,7 @@
 			color: #06f;
 			&:after{
 				height: 100%;
-				left: 0;
+				top: 0;
 			}
 		}
 	}

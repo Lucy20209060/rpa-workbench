@@ -26,4 +26,8 @@ export class MainLayoutComponent implements OnInit {
       this.menuList = menuList(list);
     });
   }
+
+  menuClick(item) {
+    this.currentPath = item.path;
+  }
 }

@@ -9,6 +9,7 @@
       *ngFor="let item of menuList" 
       routerLink="{{item.code}}"
       class="{{currentPath === item.path ? 'active' : null }}"
+      (click)="menuClick(item)"
       >
         <i class="iconfont {{item.icon}}"></i>
         <span>{{item.name}}</span>
