@@ -1,3 +1,5 @@
-<div class="page-header-wrap">
-  <p class="title">{{ pageInfo.name }}</p>
+<div class="page-header-wrap" *ngIf="pageInfo">
+  <p class="title">{{pageInfo.name}}</p>
+  <!-- 首页没有二级页面 -->
+  <page-tab *ngIf="pageInfo.resources.length !== 0" [resources]="pageInfo.resources" [path]="pageInfo.path"></page-tab>
 </div>

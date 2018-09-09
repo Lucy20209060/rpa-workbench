@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core'
 import { Router } from '@angular/router';
-export type page = {name:string, link:string, child?:Array<Object>}
+export type page = {name:string, code:string, path:string, icon:string, resources?:Array<Object>}
 
 @Component({
   selector: 'page-header',
@@ -18,6 +18,4 @@ export class PageHeaderComponent {
   ngOnInit() {
     // console.log(this.pageInfo)
   }
-  
-  
 }

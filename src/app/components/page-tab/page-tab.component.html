@@ -1,0 +1,10 @@
+<div class="page-tab-wrap">
+	<a 
+		*ngFor="let item of resources" 
+		routerLink="/{{path}}/{{item.code}}"
+		class="{{currentPath === item.code ? 'active' : null}}"
+		(click)="tabClick(item.code)"
+	>
+		{{item.name}}
+	</a>
+</div>

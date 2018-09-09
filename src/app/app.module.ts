@@ -18,6 +18,7 @@ import { LuClassDirective } from '../shared/directives';
 
 // 引入自定义组件
 import { PageHeaderComponent } from '../app/components/page-header/page-header.component';
+import { PageTabComponent } from '../app/components/page-tab/page-tab.component';
 
 // 引入页面 
 import { AppComponent } from './app.component';
@@ -42,6 +43,7 @@ const directives = [
     ...directives,
 
     PageHeaderComponent,
+    PageTabComponent,
 
     AppComponent,
     HomePageComponent,
