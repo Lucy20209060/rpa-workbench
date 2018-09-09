@@ -30,6 +30,7 @@ import { UserInfoComponent } from './system-config/user-info/user-info.component
 import { EnterpriseSettingComponent } from './system-config/enterprise-setting/enterprise-setting.component';
 import { RobotUnattendedComponent } from './client-monitor/robot-unattended/robot-unattended.component';
 import { UnattendedRobotTaskComponent } from './task-manager/unattended-robot-task/unattended-robot-task.component';
+import { VariableListComponent } from './asset-manager/variable-list/variable-list.component';
 
 
 
@@ -55,7 +56,8 @@ const directives = [
     UserInfoComponent,
     EnterpriseSettingComponent,
     RobotUnattendedComponent,
-    UnattendedRobotTaskComponent
+    UnattendedRobotTaskComponent,
+    VariableListComponent
   ],
   imports: [
     BrowserModule,

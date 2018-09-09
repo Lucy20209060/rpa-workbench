@@ -9,6 +9,7 @@ import { UserInfoComponent } from './system-config/user-info/user-info.component
 import { EnterpriseSettingComponent } from './system-config/enterprise-setting/enterprise-setting.component';
 import { RobotUnattendedComponent } from './client-monitor/robot-unattended/robot-unattended.component';
 import { UnattendedRobotTaskComponent } from './task-manager/unattended-robot-task/unattended-robot-task.component';
+import { VariableListComponent } from './asset-manager/variable-list/variable-list.component';
 
 const routes: Routes = [
 	// 重定向
@@ -43,6 +44,13 @@ const routes: Routes = [
 				path: 'taskManager',
 				children: [
 					{ path:'unattendedRobotTask', component:UnattendedRobotTaskComponent, data:{title:'计划任务管理'} }
+				]
+			},
+			{path: 'assetManager',redirectTo:'assetManager/variableList'},
+			{ 
+				path: 'assetManager',
+				children: [
+					{ path:'variableList', component:VariableListComponent, data:{title:'资产管理'} }
 				]
 			},
 		]
