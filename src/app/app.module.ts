@@ -17,8 +17,9 @@ import { SliceStrPipe } from '../shared/pipes';
 import { LuClassDirective } from '../shared/directives';
 
 // 引入自定义组件
-import { PageHeaderComponent } from '../app/components/page-header/page-header.component';
-import { PageTabComponent } from '../app/components/page-tab/page-tab.component';
+import { PageHeaderComponent } from './components/page-header/page-header.component';
+import { PageTabComponent } from './components/page-tab/page-tab.component';
+import { LogoComponent } from './components/logo/logo.component';
 
 // 引入页面 
 import { AppComponent } from './app.component';
@@ -54,6 +55,7 @@ const directives = [
 
     PageHeaderComponent,
     PageTabComponent,
+    LogoComponent,
 
     AppComponent,
     HomePageComponent,
