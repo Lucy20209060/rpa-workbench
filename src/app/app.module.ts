@@ -35,6 +35,7 @@ import { UserListComponent } from './user-auth-manager/user-list/user-list.compo
 import { RoleListComponent } from './user-auth-manager/role-list/role-list.component';
 import { AppListComponent } from './market-manager/app-list/app-list.component';
 import { AppApplyComponent } from './market-manager/app-apply/app-apply.component';
+import { OpLogListComponent } from './op-log-query/op-log-list/op-log-list.component';
 
 
 
@@ -65,7 +66,8 @@ const directives = [
     UserListComponent,
     RoleListComponent,
     AppListComponent,
-    AppApplyComponent
+    AppApplyComponent,
+    OpLogListComponent
   ],
   imports: [
     BrowserModule,

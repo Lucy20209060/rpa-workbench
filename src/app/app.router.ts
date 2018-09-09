@@ -14,6 +14,7 @@ import { UserListComponent } from './user-auth-manager/user-list/user-list.compo
 import { RoleListComponent } from './user-auth-manager/role-list/role-list.component';
 import { AppListComponent } from './market-manager/app-list/app-list.component';
 import { AppApplyComponent } from './market-manager/app-apply/app-apply.component';
+import { OpLogListComponent } from './op-log-query/op-log-list/op-log-list.component';
 
 const routes: Routes = [
 	// 重定向
@@ -78,6 +79,14 @@ const routes: Routes = [
 				children: [
 					{ path:'appList', component:AppListComponent, data:{title:'企业应用市场管理'} },
 					{ path:'appApply', component:AppApplyComponent, data:{title:'企业应用市场管理'} }
+				]
+			},
+			// 操作日志查询
+			{path: 'opLogQuery',redirectTo:'opLogQuery/opLogList'},
+			{ 
+				path: 'opLogQuery',
+				children: [
+					{ path:'opLogList', component:OpLogListComponent, data:{title:'操作日志查询'} }
 				]
 			},
 		]
