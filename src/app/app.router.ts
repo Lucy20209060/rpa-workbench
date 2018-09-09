@@ -12,6 +12,8 @@ import { UnattendedRobotTaskComponent } from './task-manager/unattended-robot-ta
 import { VariableListComponent } from './asset-manager/variable-list/variable-list.component';
 import { UserListComponent } from './user-auth-manager/user-list/user-list.component';
 import { RoleListComponent } from './user-auth-manager/role-list/role-list.component';
+import { AppListComponent } from './market-manager/app-list/app-list.component';
+import { AppApplyComponent } from './market-manager/app-apply/app-apply.component';
 
 const routes: Routes = [
 	// 重定向
@@ -25,7 +27,9 @@ const routes: Routes = [
 		path: '', 
 		component: MainLayoutComponent, 
 		children: [
+			// 首页
 			{ path:'homePage', component:HomePageComponent, data:{title:'首页'} },
+			// 系统设置
 			{path: 'systemConfig',redirectTo:'systemConfig/userInfo'},
 			{ 
 				path: 'systemConfig',
@@ -34,6 +38,7 @@ const routes: Routes = [
 					{ path:'enterpriseSetting', component:EnterpriseSettingComponent, data:{title:'系统设置'} }
 				]
 			},
+			// 客户端监控
 			{path: 'clientMonitor',redirectTo:'clientMonitor/robotUnattended'},
 			{ 
 				path: 'clientMonitor',
@@ -41,6 +46,7 @@ const routes: Routes = [
 					{ path:'robotUnattended', component:RobotUnattendedComponent, data:{title:'客户端监控'} }
 				]
 			},
+			// 计划任务管理
 			{path: 'taskManager',redirectTo:'taskManager/unattendedRobotTask'},
 			{ 
 				path: 'taskManager',
@@ -48,6 +54,7 @@ const routes: Routes = [
 					{ path:'unattendedRobotTask', component:UnattendedRobotTaskComponent, data:{title:'计划任务管理'} }
 				]
 			},
+			// 资产管理
 			{path: 'assetManager',redirectTo:'assetManager/variableList'},
 			{ 
 				path: 'assetManager',
@@ -55,12 +62,22 @@ const routes: Routes = [
 					{ path:'variableList', component:VariableListComponent, data:{title:'资产管理'} }
 				]
 			},
+			// 用户与权限管理
 			{path: 'userAuthManager',redirectTo:'userAuthManager/userList'},
 			{ 
 				path: 'userAuthManager',
 				children: [
 					{ path:'userList', component:UserListComponent, data:{title:'用户与权限管理'} },
 					{ path:'roleList', component:RoleListComponent, data:{title:'用户与权限管理'} }
+				]
+			},
+			// 企业应用市场管理
+			{path: 'marketManager',redirectTo:'marketManager/appList'},
+			{ 
+				path: 'marketManager',
+				children: [
+					{ path:'appList', component:AppListComponent, data:{title:'企业应用市场管理'} },
+					{ path:'appApply', component:AppApplyComponent, data:{title:'企业应用市场管理'} }
 				]
 			},
 		]

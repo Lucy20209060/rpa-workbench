@@ -33,6 +33,8 @@ import { UnattendedRobotTaskComponent } from './task-manager/unattended-robot-ta
 import { VariableListComponent } from './asset-manager/variable-list/variable-list.component';
 import { UserListComponent } from './user-auth-manager/user-list/user-list.component';
 import { RoleListComponent } from './user-auth-manager/role-list/role-list.component';
+import { AppListComponent } from './market-manager/app-list/app-list.component';
+import { AppApplyComponent } from './market-manager/app-apply/app-apply.component';
 
 
 
@@ -61,7 +63,9 @@ const directives = [
     UnattendedRobotTaskComponent,
     VariableListComponent,
     UserListComponent,
-    RoleListComponent
+    RoleListComponent,
+    AppListComponent,
+    AppApplyComponent
   ],
   imports: [
     BrowserModule,
