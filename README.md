@@ -65,4 +65,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * 2018-09-09 21:16:14 feat:tab二级页面切换组件完成
 * 2018-09-09 22:00:19 feat:clientMonitor客户端监控页面
 * 2018-09-09 22:07:32 feat:taskManager计划任务管理页面
-* 2018-09-09 22:16:06 feat:assetManager资产管理页面* 2018-09-09 22:21:36 feat:userAuthManager用户与权限管理页面* 2018-09-09 22:27:59 feat:marketManager企业应用市场管理页面* 2018-09-09 22:33:01 feat:opLogQuery操作日志查询页面
+* 2018-09-09 22:16:06 feat:assetManager资产管理页面* 2018-09-09 22:21:36 feat:userAuthManager用户与权限管理页面* 2018-09-09 22:27:59 feat:marketManager企业应用市场管理页面* 2018-09-09 22:33:01 feat:opLogQuery操作日志查询页面* 2018-09-09 22:38:47 feat:lisenceManager授权许可管理页面

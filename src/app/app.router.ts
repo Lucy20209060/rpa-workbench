@@ -5,8 +5,6 @@ import { MainLayoutComponent } from './layouts/main-layout/main-layout.component
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
-import { UserInfoComponent } from './system-config/user-info/user-info.component';
-import { EnterpriseSettingComponent } from './system-config/enterprise-setting/enterprise-setting.component';
 import { RobotUnattendedComponent } from './client-monitor/robot-unattended/robot-unattended.component';
 import { UnattendedRobotTaskComponent } from './task-manager/unattended-robot-task/unattended-robot-task.component';
 import { VariableListComponent } from './asset-manager/variable-list/variable-list.component';
@@ -15,6 +13,10 @@ import { RoleListComponent } from './user-auth-manager/role-list/role-list.compo
 import { AppListComponent } from './market-manager/app-list/app-list.component';
 import { AppApplyComponent } from './market-manager/app-apply/app-apply.component';
 import { OpLogListComponent } from './op-log-query/op-log-list/op-log-list.component';
+import { LicenseListComponent } from './lisence-manager/license-list/license-list.component';
+import { LicenseInfoComponent } from './lisence-manager/license-info/license-info.component';
+import { UserInfoComponent } from './system-config/user-info/user-info.component';
+import { EnterpriseSettingComponent } from './system-config/enterprise-setting/enterprise-setting.component';
 
 const routes: Routes = [
 	// 重定向
@@ -87,6 +89,15 @@ const routes: Routes = [
 				path: 'opLogQuery',
 				children: [
 					{ path:'opLogList', component:OpLogListComponent, data:{title:'操作日志查询'} }
+				]
+			},
+			// 授权许可管理
+			{path: 'lisenceManager',redirectTo:'lisenceManager/licenseList'},
+			{ 
+				path: 'lisenceManager',
+				children: [
+					{ path:'licenseList', component:LicenseListComponent, data:{title:'授权许可管理'} },
+					{ path:'licenseInfo', component:LicenseInfoComponent, data:{title:'授权许可管理'} }
 				]
 			},
 		]
