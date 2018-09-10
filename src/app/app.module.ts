@@ -20,6 +20,7 @@ import { LuClassDirective } from '../shared/directives';
 import { PageHeaderComponent } from './components/page-header/page-header.component';
 import { PageTabComponent } from './components/page-tab/page-tab.component';
 import { LogoComponent } from './components/logo/logo.component';
+import { FilterComponent } from './components/filter/filter.component';
 
 // 引入页面 
 import { AppComponent } from './app.component';
@@ -56,6 +57,7 @@ const directives = [
     PageHeaderComponent,
     PageTabComponent,
     LogoComponent,
+    FilterComponent,
 
     AppComponent,
     HomePageComponent,

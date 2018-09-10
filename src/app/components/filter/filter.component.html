@@ -1,0 +1,16 @@
+<div class="filter-wrap">
+	<div *ngFor="let item of condition" class="input-wrap">
+		<div *ngIf="item.type === 'Input'">
+			<label>{{item.key}}</label>
+			<el-input 
+				[model]="item.value" 
+				size="small" 
+				placeholder="{{item.placeholder}}"
+
+			></el-input>
+		</div>
+		<div *ngIf="item.type === 'Select'">Select</div>
+	</div>
+	<input type="text" #name />
+	<button (click)="onClick(name)">点击</button>
+</div>

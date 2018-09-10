@@ -1,6 +1,26 @@
 .el-container{
   height: 100%;
 }
+.el-main{
+	background-color: #f9f9fb;
+	/*定义滑道 高宽分别对应横竖滚动条的尺寸*/
+	&::-webkit-scrollbar {
+			width: 6px;
+			height: 6px;
+	}
+	/*定义滑块 内阴影+圆角*/ 
+	&::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: rgba(106,106,106,.8);
+	}
+	/*定义滑道 内阴影+圆角*/ 
+	// &::-webkit-scrollbar-track {
+	// 		-webkit-box-shadow: inset 0 0 2.5px rgba(0, 0, 0, 0.3);
+	// 	box-shadow: inset 0 0 2.5px rgba(0, 0, 0, 0.3); 
+	// 	border-radius: 2.5px; 
+	// 	background-color: #F5F5F5; 
+	// }
+}
 .el-aside{
 	background-color: #0c1836;
 	opacity: .98;
