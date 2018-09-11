@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input, Output, EventEmitter } from '@angular/core'
 
 @Component({
   selector: 'filter',
@@ -6,23 +6,23 @@ import { Component, Input } from '@angular/core'
   styleUrls: ['./filter.component.scss'],
 })
 export class FilterComponent {
-  @Input() condition
-  public value:string;
+  
+  @Input() condition:Array<object>;
+  @Output() change: EventEmitter<any> = new EventEmitter<any>();
+
   constructor() {}
 
   ngOnInit() {
 		
   }
 
-  changeName(event) {
-    console.log(event,this.condition)
+  // input框删除按钮
+  cancel(index) {
+    this.condition[index]['value'] = ''
   }
 
-  // ngDoCheck() {
-  //   console.log(this.value)
-  // }
-  
-  onClick() {
-    console.log(this.value)
+  // input change
+  inputChange() {
+    this.change.emit(this.condition)
   }
 }

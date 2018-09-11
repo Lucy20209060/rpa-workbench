@@ -1,12 +1,14 @@
 <div class="filter-wrap">
-	<div *ngFor="let item of condition" class="input-wrap">
+	<div *ngFor="let item of condition;let i = index" class="input-wrap">
 		<div *ngIf="item.type === 'Input'">
 			<label>{{item.key}}</label>
 			<el-input 
 				[(ngModel)]="item.value"
 				size="small" 
+				icon="{{item.value === '' ? '' : 'circle-close'}}"
 				placeholder="{{item.placeholder}}"
-				(ngModelChange)="changeName($event)"
+				(ngModelChange)="inputChange()"
+				(icon-click)="cancel(i)"
 			></el-input>
 		</div>
 		<div *ngIf="item.type === 'Select'">Select</div>

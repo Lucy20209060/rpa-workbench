@@ -6,8 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./robot-unattended.component.scss']
 })
 export class RobotUnattendedComponent implements OnInit {
-  conditionInfo:Array<object>
-  value:string='123'
+  conditionInfo:Array<object>;
   constructor() {
     this.conditionInfo = [
       {
@@ -20,6 +19,10 @@ export class RobotUnattendedComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  onChange($event) {
+    console.log(this.conditionInfo)
   }
 
 }
