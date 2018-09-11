@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 // 引入element UI
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ElModule } from 'element-angular/release/element-angular.module';
+// import { ElModule } from 'element-angular/release/element-angular.module';
+import { ElModule } from 'element-angular';
 
 // 引入路由模块
 import { AppRoutingModule } from './app.router';
@@ -81,8 +83,11 @@ const directives = [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+
     ElModule.forRoot(),
-    HttpModule
+
+    HttpModule,
+    FormsModule
   ],
   providers: [
     MyToolsService,
