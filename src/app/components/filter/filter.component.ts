@@ -26,4 +26,8 @@ export class FilterComponent {
   inputChange() {
     this.change.emit(this.condition)
   }
+
+  selectChange() {
+    this.change.emit(this.condition)
+  }
 }

@@ -14,7 +14,7 @@ export class RobotUnattendedComponent implements OnInit {
         type: 'Input',
         key: '机器人昵称',
         value: '',
-        placeholder: '输入机器人昵称'
+        placeholder: '请输入机器人昵称'
       }
     ]
   }

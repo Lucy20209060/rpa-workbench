@@ -12,6 +12,20 @@
 				(icon-click)="cancel(i)"
 			></el-input>
 		</div>
-		<div *ngIf="item.type === 'Select'">Select</div>
+		<div *ngIf="item.type === 'Select'">
+				<label>{{item.key}}</label>
+			<el-select 
+				size="small" 
+				placeholder="item.placeholder"
+				[(model)]="item.value" 
+				(modelChange)="selectChange()"
+			>
+				<el-option 
+					*ngFor="let el of item.option"
+					[label]="el.label"
+					[value]="el.value"
+				></el-option>
+			</el-select>
+		</div>
 	</div>
 </div>
