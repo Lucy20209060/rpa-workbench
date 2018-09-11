@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { delay } from '../../../shared/utils/index'
 
 @Component({
   selector: 'app-robot-unattended',
@@ -12,7 +13,7 @@ export class RobotUnattendedComponent implements OnInit {
       {
         type: 'Input',
         key: '机器人昵称',
-        value: 'luchao',
+        value: '',
         placeholder: '输入机器人昵称'
       }
     ]
@@ -21,8 +22,10 @@ export class RobotUnattendedComponent implements OnInit {
   ngOnInit() {
   }
 
-  onChange($event) {
-    console.log(this.conditionInfo)
+  onChange() {
+    delay(()=>{
+      console.log('value',this.conditionInfo[0]['value'])
+    })
   }
 
 }

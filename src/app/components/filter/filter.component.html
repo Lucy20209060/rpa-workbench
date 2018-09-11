@@ -1,5 +1,6 @@
 <div class="filter-wrap">
 	<div *ngFor="let item of condition;let i = index" class="input-wrap">
+		<!-- Input -->
 		<div *ngIf="item.type === 'Input'">
 			<label>{{item.key}}</label>
 			<el-input 

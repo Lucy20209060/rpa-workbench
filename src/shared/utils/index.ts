@@ -1,4 +1,5 @@
 import { findIndex } from 'lodash';
+import { timeout } from '../../../node_modules/@types/q';
 /**
  * 获取URL中的参数
  */
@@ -59,4 +60,12 @@ export const menuList = (menuList:Array<object>):Array<object> => {
     })
   }
   return tem;
+}
+
+let timeOut = null;
+export const delay = (fn:Function):void => {
+  clearTimeout(timeOut);
+  timeOut = setTimeout(()=>{
+    fn();
+  },800)
 }

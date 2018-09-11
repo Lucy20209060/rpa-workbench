@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
   styleUrls: ['./filter.component.scss'],
 })
 export class FilterComponent {
-  
+
   @Input() condition:Array<object>;
   @Output() change: EventEmitter<any> = new EventEmitter<any>();
 
@@ -18,7 +18,8 @@ export class FilterComponent {
 
   // input框删除按钮
   cancel(index) {
-    this.condition[index]['value'] = ''
+    this.condition[index]['value'] = '';
+    this.inputChange();
   }
 
   // input change

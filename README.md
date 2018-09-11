@@ -73,4 +73,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * 2018-09-09 23:03:58 feat:logo组件
 * 2018-09-10 23:59:37 feat:删除文档
 * 2018-09-11 01:47:08 feat:双向绑定探索
-* 2018-09-11 15:22:26 feat:[(ngModel)]双向数据绑定* 2018-09-11 19:25:30 feat:筛选条件初步完成
+* 2018-09-11 15:22:26 feat:[(ngModel)]双向数据绑定* 2018-09-11 19:25:30 feat:筛选条件初步完成* 2018-09-11 20:29:29 feat:使用延时函数优化筛选框体验
