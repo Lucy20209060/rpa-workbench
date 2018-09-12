@@ -28,25 +28,6 @@ export class UnattendedRobotTaskComponent implements OnInit {
           {label:'手动终止', value:'termination'},
           {label:'执行终止', value:'completion'}
         ]
-      },
-      {
-        type: 'Input',
-        key: '计划任务名称',
-        value: '',
-        placeholder: '请输入机器人昵称'
-      },
-      {
-        type: 'Select',
-        key: '请选择任务状态',
-        value: '',
-        placeholder: '',
-        option:[
-          {label:'全部', value:''},
-          {label:'等待执行', value:'wait'},
-          {label:'正在执行', value:'running'},
-          {label:'手动终止', value:'termination'},
-          {label:'执行终止', value:'completion'}
-        ]
       }
     ]
   }
