@@ -51,3 +51,8 @@ img{
 [class*="-page-wrap"]{
 	padding-top: 25px;
 }
+.pagination-wrap{
+	background-color: #fff;
+	padding: 20px;
+	text-align: right;
+}

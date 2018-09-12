@@ -1,4 +1,20 @@
 <div class="robot-unattended-page-wrap">
   <filter [condition]="conditionInfo" (change)="onChange()"></filter>
-  <div> robot unattended work! </div>
+  <div class="content-wrap">
+    <el-table [model]="tableList" [border]="true">
+      <el-table-column model-key="name" label="机器人昵称"></el-table-column>
+      <el-table-column model-key="connStatus" label="终端计算机地址" ></el-table-column>
+      <el-table-column model-key="hasPlan" label="连接状态"></el-table-column>
+      <el-table-column model-key="ip" label="Ip"></el-table-column>
+    </el-table>
+    <div class="pagination-wrap">
+      <el-pagination 
+        [(model)]="pager.currentPage"
+        [total]="pager.total"
+        [page-size]="pager.pageSize"
+        [layout]="['prev', 'pager', 'next', 'total']"
+        (modelChange)="paginationChange()"
+      ></el-pagination>
+    </div>
+  </div>
 </div>
