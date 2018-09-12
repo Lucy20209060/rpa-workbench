@@ -4,8 +4,17 @@
     <el-table [model]="tableList" [border]="true">
       <el-table-column model-key="name" label="机器人昵称"></el-table-column>
       <el-table-column model-key="connStatus" label="终端计算机地址" ></el-table-column>
-      <el-table-column model-key="hasPlan" label="连接状态"></el-table-column>
-      <el-table-column model-key="ip" label="Ip"></el-table-column>
+      <el-table-column model-key="hasPlan" label="连接状态">
+        <ng-template #slot let-scope="scope">
+          <span *ngIf="scope.rowData.connStatus === 'unconnect'">未连接</span>
+          <span *ngIf="scope.rowData.connStatus === 'connecting'">已连接</span>
+        </ng-template>
+      </el-table-column>
+      <el-table-column label="操作">
+        <ng-template #slot let-scope="scope">
+          <el-button type="text" size="small" (click)="handle(scope)">点击</el-button>
+        </ng-template>
+      </el-table-column>
     </el-table>
     <div class="pagination-wrap">
       <el-pagination 

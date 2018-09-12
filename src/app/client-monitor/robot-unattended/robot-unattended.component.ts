@@ -48,4 +48,10 @@ export class RobotUnattendedComponent implements OnInit {
     this.getTableList();
   }
 
+  handle(ref: any): void {
+    // 当前index data
+    // console.log(ref.index)
+    console.log(ref.rowData)
+  }
+
 }
