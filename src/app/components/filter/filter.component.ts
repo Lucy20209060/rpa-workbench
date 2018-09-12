@@ -30,4 +30,15 @@ export class FilterComponent {
   selectChange() {
     this.change.emit(this.condition)
   }
+
+  reset() {
+    this.condition.forEach( ( item, index ) => {
+      if(item["type"] === "Input"){
+        this.condition[index]['value'] = ''
+      }else if(item["type"] === "Select"){
+        this.condition[index]['value'] = ""
+      }
+      this.inputChange();
+    });
+  }
 }
