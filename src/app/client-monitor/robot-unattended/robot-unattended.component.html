@@ -3,7 +3,7 @@
   <div class="content-wrap">
     <el-table [model]="tableList" [border]="true">
       <el-table-column model-key="name" label="机器人昵称"></el-table-column>
-      <el-table-column model-key="connStatus" label="终端计算机地址" ></el-table-column>
+      <el-table-column model-key="ip" label="终端计算机地址" ></el-table-column>
       <el-table-column model-key="hasPlan" label="连接状态">
         <ng-template #slot let-scope="scope">
           <span *ngIf="scope.rowData.connStatus === 'unconnect'">未连接</span>
