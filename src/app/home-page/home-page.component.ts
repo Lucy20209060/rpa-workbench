@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // import { Http, Response } from '@angular/http';
+import { delay } from '../../shared/utils/index'
 
 @Component({
   selector: 'app-home-page',
@@ -29,6 +30,12 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit() {
     
+  }
+
+  onChange() {
+    delay(()=>{
+      console.log(1)
+    })
   }
 
 }

@@ -62,6 +62,9 @@ export const menuList = (menuList:Array<object>):Array<object> => {
   return tem;
 }
 
+/**
+ * 函数防抖
+ */
 let timeOut = null;
 export const delay = (fn:Function):void => {
   clearTimeout(timeOut);
