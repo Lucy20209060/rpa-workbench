@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import { Http, Response } from '@angular/http';
 import { delay } from '../../shared/utils/index'
+import { MyHttpService } from '../../shared/services';
 
 @Component({
   selector: 'app-home-page',
@@ -23,19 +23,37 @@ export class HomePageComponent implements OnInit {
       }
     ]
   }
+  productList:Array<object> = [];
 
-  constructor(
-    // private http: Http
-  ) { }
+  constructor( private myHttp: MyHttpService ) {
+    
+  }
 
   ngOnInit() {
-    
+    this.getProduct();
   }
 
   onChange() {
     delay(()=>{
       console.log(1)
     })
+  }
+
+  // 获取菜单列表
+  getProduct() {
+    this.myHttp.ajax('http://localhost:3002/rpa/product/list',{},'get',(res)=>{
+      this.productList = res.data;
+    });
+  }
+
+  productClick(productId) {
+    this.getProductDetail(productId)
+  }
+
+  getProductDetail(productId) {
+    this.myHttp.ajax(`http://localhost:3002/rpa/product/detail/${productId}`,{},'get',(res)=>{
+      console.log(res)
+    });
   }
 
 }

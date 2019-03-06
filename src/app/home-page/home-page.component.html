@@ -2,3 +2,12 @@
   home-page worlds!
 </p>
 <button (click)='onChange()'>点击</button>
+<ul class="productList-wrap">
+  <li
+    *ngFor="let item of productList" 
+    (click)="productClick(item.productId)"
+  >
+    <img src="{{item.image}}" alt="">
+    <p>{{item.name}}</p>
+  </li>
+</ul>

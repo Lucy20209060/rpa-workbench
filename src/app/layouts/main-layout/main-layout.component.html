@@ -5,7 +5,7 @@
         <!-- routerLinkActive 当前路由激活class -->
       <a 
       *ngFor="let item of menuList" 
-      routerLink="{{item.code}}"
+      routerLink="/{{item.code}}"
       class="{{currentPath === item.path ? 'active' : null }}"
       (click)="menuClick(item)"
       >

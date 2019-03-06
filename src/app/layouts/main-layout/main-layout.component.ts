@@ -23,18 +23,16 @@ export class MainLayoutComponent implements OnInit {
     this.getmenuList();
 
     // 获取信息条数
-    this.getUnreadCount();
-    setInterval(() => {
-      this.getUnreadCount();
-    },60000)
+    // this.getUnreadCount();
+    // setInterval(() => {
+    //   this.getUnreadCount();
+    // },60000)
   }
 
   // 获取菜单列表
   getmenuList() {
-    this.myHttp.ajax('/rpa/auth/page/menu/list',{},'get',(res)=>{
-      const list = res.data;
-      this.menuList = menuList(list);
-      this.getCurrentPage(this.currentPath);
+    this.myHttp.ajax('http://localhost:3002/rpa/menu/list',{},'get',(res)=>{
+      this.menuList = res.data;
     });
   }
 
